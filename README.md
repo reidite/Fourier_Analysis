@@ -42,12 +42,29 @@ The coefficients $a_k$ and $b_k$ are given by
 $$a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)cos(kx)dx$$
 $$b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)sin(kx)dx$$
 which may be viewed as the coordinates obtained by projecting the function onto the orthogonal cosine and sine basis $\left \{ cos(kx), sin(kx) \right \}_{k=0}^{\infin}$. In other words, the integrals in may be re-written in terms of the inner product as:
+
 $$a_k=\frac{1}{\left \| cos(kx) \right \|^2}\left \langle f(x), cos(kx)  \right \rangle$$
 $$b_k=\frac{1}{\left \| sin(kx) \right \|^2}\left \langle f(x), sin(kx)  \right \rangle$$
+
 where $\left \| cos(kx) \right \|^2=\left \| sin(kx) \right \|^2=\pi$. This factor of $\frac{1}{\pi}$ is easy to verify by numerically integrating $cos(x)^2$ and $sin(x)^2$ from $-\pi$ to $\pi$.
 
 The Fourier series for an $L$-periodic function on $[ 0, L)$ is similarly given by:
-$$f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infin}{(a_kcos(\frac{2\pi kx}{L}+b_ksin(\frac{2\pi kx}{L})))}$$ 
+$$f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infin}{(a_kcos(\frac{2\pi kx}{L}+b_ksin(\frac{2\pi kx}{L})))}$$
+
+with coefficients $a_k$ abd $b_k$ given by
+
+$$a_k=\frac{2}{L} \int_{0}^{L}f(x)cos(\frac{2\pi kx}{L})dx$$
+$$b_k=\frac{2}{L} \int_{0}^{L}f(x)sin(\frac{2\pi kx}{L})dx$$
+
+Because we are expanding functions in terms of sine and cosine functions, it is also natural to use Euler's formular $e^{ikx}=cos(kx)+i sin(kx)$ to write a Fourier series in complex form with complex coefficients $c_k=\alpha_k+i\beta_k:$
+
+$$f(x)=\sum_{k=-\infin}^{\infin}c_ke^{ikx}=\sum_{k=-\infin}^{\infin}(\alpha_k+i\beta_k)(cos(kx)+isin(kx))$$
+$$=(\alpha_0+i\beta_0)+\sum_{k=1}^{\infin}{[(\alpha_{-k}+\alpha_{k})\cos(kx)+(\beta_{-k}-\beta_{k})\sin(kx)]}$$
+$$+ i\sum_{k=1}^{\infin}{[(\beta_{-k}+\beta_{k})\cos(kx)-(\alpha_{-k}-\alpha_{k})\sin(kx)]}$$
+
+If $f(x)$ is real-valued, then $\alpha_{-k} = \alpha_{k}$ and $\beta_{-k} = -\beta_{k}$, so that $c_{-k}=\bar{c}_k$. Thus, the function $\psi_k=e^{ikx}$ for $k \in \mathbb{Z}$ provide a basis for periodic, complex-valued functons on an interval $[0,2\pi)$. It is simple to see that these functions are orthogonal:
+$$\left\langle \psi_j, \psi_k \right\rangle = \int_{-\pi}^{\pi}e^{ijx}e^{-ikx}dx=\int_{-\pi}^{\pi}e^{i(j-k)x}dx=[\frac{e^{i(j-k)x}}{i(j-k)}]_{-\pi}^{\pi}$$
+
 ### Fourier transform
 
 
