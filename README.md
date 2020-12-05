@@ -81,4 +81,8 @@ $$\left\langle \psi_j, \psi_k \right\rangle = \int_{-\pi}^{\pi}e^{ijx}e^{-ikx}dx
 ## References
 
 - #### [Jean Baptiste Joseph Fourier. The analytical theory of heat. The University Press, 1878](https://www.cambridge.org/core/books/analytical-theory-of-heat/F6D4802336FABD1116DDA4AA3FE6EFAA).
-    
+
+
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
