@@ -1,5 +1,5 @@
 <h1 align="center">
-<p> Fourier and Wavelet Transforms :memo:</p>
+<p> Fourier and Wavelet :memo:</p>
 <p align="center">
 <img alt="ubuntu" src="https://img.shields.io/badge/ubuntu-%3E%3D18.04-blueviolet?style=for-the-badge&logo=ubuntu">
 <img alt="python" src="https://img.shields.io/badge/python-%3E%3D3.6-blue?style=for-the-badge&logo=python">
@@ -12,6 +12,9 @@
 
 - [Introduction](#introduction)
 - [Fourier series and Fourier transforms](#fourier-series-and-fourier-transforms)
+  - [Inner products of functions and vectors](#inner-products-of-functions-and-vectors)
+  - [Fourier series](#fourier-series)
+  - [Fourier transform](#fourier-transform)
 - [Discrete Fourier transform (DFT) and fast Fourier Transform (FFT)](#discrete-fourier-transform-dft-and-fast-fourier-transform-fft)
 - [Transforming partial differential equations](#transforming-partial-differential-equations)
 - [Gabor transform and the spectrogram](#gabor-transform-and-the-spectrogram)
@@ -24,9 +27,16 @@ The most foundational and ubiquitous coordinate transformation was introduced by
 
 Fourier's seminal work provided the mathematical foundation for Hilbert spaces, operator theory, approximation theory, and the subsequent revolution in analytical and computational mathematics. Fast forward two hundred years, and the fast Fourier transform has become the cornerstone of computational  mathematics, enabling real-time image and audio compression, global communication networks, mordern devices and hardware, numerical physics and enineering at scale, and advanced data analysis. Simply put, the fast Fourier transform has had a more significant and profound role in shaping the modern world than any other algorithm to date.
 
-With increasingly complex problems, data sets, and computational geometries, simple Fourier sine and cosine bases have given way to tailored bases, such as the data-driven SVD. In fact, the SVD basis can be used as a direct analogue of the Fourier basis for solving PDEs with complex geometries. In addition, related functions, called wavelets, have been developed for advanced signal processing and compression efforts,
+With increasingly complex problems, data sets, and computational geometries, simple Fourier sine and cosine bases have given way to tailored bases, such as the data-driven SVD. In fact, the SVD basis can be used as a direct analogue of the Fourier basis for solving PDEs with complex geometries. In addition, related functions, called wavelets, have been developed for advanced signal processing and compression efforts.
 
 ## Fourier series and Fourier transforms
+Naturally, the discrete and continous formulations should match in the limit of data with infinitely fine resolution. The Fourier series and transform are intimately related to the geometry of infinite-dimensional function spaces, or Hillbert spaces, which generalize te notion of vector space to include functions with infinitely many degrees of freedom.
+### Inner products of functions and vectors
+
+### Fourier series
+
+### Fourier transform
+
 
 ## Discrete Fourier transform (DFT) and fast Fourier Transform (FFT)
 
