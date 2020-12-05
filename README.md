@@ -21,7 +21,8 @@ This repository presents an overview of the Fourier Transform, which is one of t
 - [References](#references)
 
 ## Introduction
-The most foundational and ubiquitous coordinate transformation was introduced by J,-B. Joseph Fourier in the early 1800s in investigate the theory of heat [1]
+The most foundational and ubiquitous coordinate transformation was introduced by J,-B. Joseph Fourier in the early 1800s in investigate the theory of heat [1].
+
 ## Fourier series and Fourier transforms
 
 ## Discrete Fourier transform (DFT) and fast Fourier Transform (FFT)
@@ -35,4 +36,6 @@ The most foundational and ubiquitous coordinate transformation was introduced by
 ## 2D transforms and image processing
 
 ## References
-- [1]: https://www.cambridge.org/core/books/analytical-theory-of-heat/F6D4802336FABD1116DDA4AA3FE6EFAA "Jean Baptiste Joseph Fourier. The analytical theory of heat. The University Press, 1878"
+
+- #### [Jean Baptiste Joseph Fourier. The analytical theory of heat. The University Press, 1878](https://www.cambridge.org/core/books/analytical-theory-of-heat/F6D4802336FABD1116DDA4AA3FE6EFAA) [1](#jean-baptiste-joseph-fourier-the-analytical-theory-of-heat-the-university-press-1878)
+    
