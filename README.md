@@ -34,7 +34,20 @@ Naturally, the discrete and continous formulations should match in the limit of 
 ### Inner products of functions and vectors
 
 ### Fourier series
+A fundamental result in Fourier analysis is that if $f(x)$ is periodic and piecewise smooth, then it can be written in term of a Fourier series, which is an infinite sum of cosines and sines of increasing frequency. In particular, if $f(x)$ is $2\pi$-periodic, it may be written as:
 
+$$f(x)=\frac{a_0}{2} + \sum_{k-1}^{\infin}(a_kcos(kx) + b_ksin(kx))$$
+
+The coefficients $a_k$ and $b_k$ are given by
+$$a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)cos(kx)dx$$
+$$b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)sin(kx)dx$$
+which may be viewed as the coordinates obtained by projecting the function onto the orthogonal cosine and sine basis $\left \{ cos(kx), sin(kx) \right \}_{k=0}^{\infin}$. In other words, the integrals in may be re-written in terms of the inner product as:
+$$a_k=\frac{1}{\left \| cos(kx) \right \|^2}\left \langle f(x), cos(kx)  \right \rangle$$
+$$b_k=\frac{1}{\left \| sin(kx) \right \|^2}\left \langle f(x), sin(kx)  \right \rangle$$
+where $\left \| cos(kx) \right \|^2=\left \| sin(kx) \right \|^2=\pi$. This factor of $\frac{1}{\pi}$ is easy to verify by numerically integrating $cos(x)^2$ and $sin(x)^2$ from $-\pi$ to $\pi$.
+
+The Fourier series for an $L$-periodic function on $[ 0, L)$ is similarly given by:
+$$f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infin}{(a_kcos(\frac{2\pi kx}{L}+b_ksin(\frac{2\pi kx}{L})))}$$ 
 ### Fourier transform
 
 
