@@ -1,6 +1,6 @@
 <h1 align="center">
 <p> Fourier and Wavelet :memo:</p>
-<p align="center">
+<p>
 <img alt="ubuntu" src="https://img.shields.io/badge/ubuntu-%3E%3D18.04-blueviolet?style=for-the-badge&logo=ubuntu">
 <img alt="python" src="https://img.shields.io/badge/python-%3E%3D3.6-blue?style=for-the-badge&logo=python">
 <img alt="numpy" src="https://img.shields.io/badge/numpy-%3E%3D1.19-skyblue?style=for-the-badge&logo=numpy">
@@ -12,9 +12,9 @@
 
 - [Introduction](#introduction)
 - [Fourier series and Fourier transforms](#fourier-series-and-fourier-transforms)
-  - [Inner products of functions and vectors](#inner-products-of-functions-and-vectors)
-  - [Fourier series](#fourier-series)
-  - [Fourier transform](#fourier-transform)
+	- [Inner products of functions and vectors](#inner-products-of-functions-and-vectors)
+	- [Fourier series](#fourier-series)
+	- [Fourier transform](#fourier-transform)
 - [Discrete Fourier transform (DFT) and fast Fourier Transform (FFT)](#discrete-fourier-transform-dft-and-fast-fourier-transform-fft)
 - [Transforming partial differential equations](#transforming-partial-differential-equations)
 - [Gabor transform and the spectrogram](#gabor-transform-and-the-spectrogram)
@@ -34,19 +34,23 @@ Naturally, the discrete and continous formulations should match in the limit of 
 ### Inner products of functions and vectors
 
 ### Fourier series
-A fundamental result in Fourier analysis is that if $f(x)$ is periodic and piecewise smooth, then it can be written in term of a Fourier series, which is an infinite sum of cosines and sines of increasing frequency. In particular, if $f(x)$ is $2\pi$-periodic, it may be written as:
+A fundamental result in Fourier analysis is that if ![formula](https://render.githubusercontent.com/render/math?math=$f(x)$) is periodic and piecewise smooth, then it can be written in term of a Fourier series, which is an infinite sum of cosines and sines of increasing frequency. In particular, if ![formula](https://render.githubusercontent.com/render/math?math=$f(x)$) is ![formula](https://render.githubusercontent.com/render/math?math=$2\pi$)-periodic, it may be written as:
 
-$$f(x)=\frac{a_0}{2} + \sum_{k-1}^{\infin}(a_kcos(kx) + b_ksin(kx))$$
+<center><img src="https://latex.codecogs.com/gif.latex?f%28x%29%3D%5Cfrac%7Ba_0%7D%7B2%7D&plus;%5Csum_%7Bk-1%7D%5E%7B%5Cinfty%7D%28a_kcos%28kx%29%20&plus;%20b_ksin%28kx%29%29"></center>
 
-The coefficients $a_k$ and $b_k$ are given by
-$$a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)cos(kx)dx$$
-$$b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)sin(kx)dx$$
-which may be viewed as the coordinates obtained by projecting the function onto the orthogonal cosine and sine basis $\left \{ cos(kx), sin(kx) \right \}_{k=0}^{\infin}$. In other words, the integrals in may be re-written in terms of the inner product as:
+The coefficients ![formula](https://render.githubusercontent.com/render/math?math=a_k) and ![formula](https://render.githubusercontent.com/render/math?math=b_k) are given by
+<center>
+<img src="https://latex.codecogs.com/gif.latex?a_k&space;=&space;\frac{1}{\pi}&space;\int_{-\pi}^{\pi}&space;f(x)cos(kx)dx"/><br/>
+<img src="https://latex.codecogs.com/gif.latex?b_k%20%3D%20%5Cfrac%7B1%7D%7B%5Cpi%7D%20%5Cint_%7B-%5Cpi%7D%5E%7B%5Cpi%7D%20f%28x%29sin%28kx%29dx"/>
+</center>
+which may be viewed as the coordinates obtained by projecting the function onto the orthogonal cosine and sine basis <img src="https://latex.codecogs.com/gif.latex?%5Cleft%20%5C%7B%20cos%28kx%29%2C%20sin%28kx%29%20%5Cright%20%5C%7D_%7Bk%3D0%7D%5E%7B%5Cinfty%7D"/>. In other words, the integrals in may be re-written in terms of the inner product as:
 
-$$a_k=\frac{1}{\left \| cos(kx) \right \|^2}\left \langle f(x), cos(kx)  \right \rangle$$
-$$b_k=\frac{1}{\left \| sin(kx) \right \|^2}\left \langle f(x), sin(kx)  \right \rangle$$
+<center>
+<img src="https://latex.codecogs.com/gif.latex?a_k%3D%5Cfrac%7B1%7D%7B%5Cleft%20%5C%7C%20cos%28kx%29%20%5Cright%20%5C%7C%5E2%7D%5Cleft%20%5Clangle%20f%28x%29%2C%20cos%28kx%29%20%5Cright%20%5Crangle"/><br/>
+<img src="https://latex.codecogs.com/gif.latex?b_k%3D%5Cfrac%7B1%7D%7B%5Cleft%20%5C%7C%20sin%28kx%29%20%5Cright%20%5C%7C%5E2%7D%5Cleft%20%5Clangle%20f%28x%29%2C%20sin%28kx%29%20%5Cright%20%5Crangle"/>
+</center>
 
-where $\left \| cos(kx) \right \|^2=\left \| sin(kx) \right \|^2=\pi$. This factor of $\frac{1}{\pi}$ is easy to verify by numerically integrating $cos(x)^2$ and $sin(x)^2$ from $-\pi$ to $\pi$.
+where <img src="https://latex.codecogs.com/gif.latex?%5Cleft%20%5C%7C%20cos%28kx%29%20%5Cright%20%5C%7C%5E2%3D%5Cleft%20%5C%7C%20sin%28kx%29%20%5Cright%20%5C%7C%5E2%3D%5Cpi"/>. This factor of <img src="https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B%5Cpi%7D"> is easy to verify by numerically integrating $cos(x)^2$ and $sin(x)^2$ from $-\pi$ to $\pi$.
 
 The Fourier series for an $L$-periodic function on $[ 0, L)$ is similarly given by:
 $$f(x)=\frac{a_0}{2}+\sum_{k=1}^{\infin}{(a_kcos(\frac{2\pi kx}{L}+b_ksin(\frac{2\pi kx}{L})))}$$
