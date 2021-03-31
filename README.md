@@ -5,10 +5,6 @@
 <img alt="python" src="https://img.shields.io/badge/python-%3E%3D3.6-blue?style=for-the-badge&logo=python">
 <img alt="numpy" src="https://img.shields.io/badge/numpy-%3E%3D1.19-skyblue?style=for-the-badge&logo=numpy">
 </p>
-</h1>
-<h1 align="left">
-<p> Table of Contents </p>
-</h1>
 
 # Table of Contents
 
