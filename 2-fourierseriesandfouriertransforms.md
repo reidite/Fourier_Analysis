@@ -30,7 +30,7 @@ Because we are expanding functions in terms of sine and cosine functions, it is 
 
 $$f(x)=\sum_{k=-\infty}^{\infty}c_ke^{ikx}=\sum_{k=-\infty}^{\infty}(\alpha_k+i\beta_k)(cos(kx)+isin(kx))$$ $$=(\alpha_0+i\beta_0)+\sum_{k=1}^{\infty}{[(\alpha_{-k}+\alpha_{k})\cos(kx)+(\beta_{-k}-\beta_{k})\sin(kx)]}$$ $$+ i\sum_{k=1}^{\infty}{[(\beta_{-k}+\beta_{k})\cos(kx)-(\alpha_{-k}-\alpha_{k})\sin(kx)]}$$
 
-If $$f(x)$$is real-valued, then $$\alpha_{-k} = \alpha_{k}$$ and $$\beta_{-k} = -\beta_{k}$$, so that $$c{-k}=\bar{c}_k$$_._ Thus, the function __$$\psi_k=e^{ikx}$$ __for  __$$k \in \mathbb{Z}$$ __provide a basis for periodic, complex-valued functions on an interval $$[0,2\pi)$$_. I_t is simple to see that these functions are orthogonal:
+If $$f(x)$$is real-valued, then $$\alpha_{-k} = \alpha_{k}$$ and $$\beta_{-k} = -\beta_{k}$$, so that $$c{-k}=\bar{c}_k$$_._ Thus, the function __$$\psi_k=e^{ikx}$$ __for  __$$k \in \mathbb{Z}$$ __provide a basis for periodic, complex-valued functons on an interval $$[0,2\pi)$$_. I_t is simple to see that these functions are orthogonal:
 
  __$$\left\langle \psi_j, \psi_k \right\rangle = \int{-\pi}^{\pi}e^{ijx}e^{-ikx}dx=\int{-\pi}^{\pi}e^{i(j-k)x}dx=[\frac{e^{i(j-k)x}}{i(j-k)}]{-\pi}^{\pi}$$\_\_
 
